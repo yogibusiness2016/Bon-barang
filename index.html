@@ -1,22 +1,23 @@
-
 <!DOCTYPE html>
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Scan Bon Barang</title>
+    <title>Scan Bon Barang - iOS Fix + Tanggal</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/@zxing/browser@latest"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <h2>Scan Barcode Barang</h2>
-    <video id="video" width="100%" height="200" style="border:1px solid black;"></video>
+    <button onclick="startCamera()">📷 Mulai Scan Barcode</button>
+    <video id="video" width="100%" height="200" style="border:1px solid black; margin-top:10px;"></video>
 
     <input type="text" id="user" placeholder="Nama User">
     <input type="text" id="barcode" placeholder="Kode Barcode" readonly>
     <input type="text" id="nama" placeholder="Nama Barang" readonly>
     <input type="text" id="supplier" placeholder="Kode Supplier" readonly>
     <input type="text" id="harga" placeholder="Kode Harga" readonly>
+    <input type="text" id="waktu" placeholder="Waktu (Otomatis)" readonly>
 
     <button onclick="submitData()">Simpan ke Google Sheet</button>
     <div id="notif" style="margin-top:20px;"></div>
